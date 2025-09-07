@@ -3,7 +3,7 @@
 "use client";
 import MarkVisited from './MarkVisited';
 import Link from 'next/link';
-// import NextImage from 'next/image';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 type Config = {
@@ -73,7 +73,7 @@ const CardClient = ({ id }: { id: string }) => {
     <main className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#0f0c29] via-[#302b63] to-[#24243e] p-8">
       <MarkVisited id={cromo.id} />
       <div className="bg-[#181824] rounded-2xl shadow-2xl p-8 flex flex-col items-center max-w-md w-full border-4 border-[#00fff0]">
-  <img src={`/api/image/${cromo.id}`} alt="" width={300} height={300} style={{objectFit: 'cover'}} className="rounded-xl mb-6 border-2 border-[#ff00ea] shadow-[0_0_30px_#00fff0]" />
+  <Image src={`/api/image/${cromo.id}`} alt="" width={300} height={300} style={{objectFit: 'cover'}} className="rounded-xl mb-6 border-2 border-[#ff00ea] shadow-[0_0_30px_#00fff0]" />
         <h1 className="text-4xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#00fff0] via-[#ff00ea] to-[#00ff85] drop-shadow-[0_0_20px_#00fff0] text-center">{cromo.nombre}</h1>
         <p className="text-lg text-[#e0e0e0] mb-6 text-center">{cromo.descripcion}</p>
   <Link href="/" className="px-6 py-2 bg-gradient-to-r from-[#ff00ea] to-[#00fff0] text-white rounded-full font-bold shadow-lg hover:from-[#00fff0] hover:to-[#ff00ea] transition">Volver a la página principal</Link>

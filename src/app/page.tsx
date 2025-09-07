@@ -14,11 +14,18 @@ type Config = {
   colorNeon3: string;
 };
 
+type Cromo = {
+  id: string;
+  nombre: string;
+  imagen: string;
+  descripcion: string;
+};
+
 export default function Home() {
 
   const [visitados, setVisitados] = useState<string[]>([]);
   const [config, setConfig] = useState<Config | null>(null);
-  const [cromos, setCromos] = useState<any[] | null>(null);
+  const [cromos, setCromos] = useState<Cromo[] | null>(null);
 
   useEffect(() => {
     const v = JSON.parse(localStorage.getItem('cromosVisitados') || '[]');
