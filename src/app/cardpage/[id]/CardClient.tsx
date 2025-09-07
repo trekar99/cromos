@@ -3,7 +3,7 @@
 "use client";
 import MarkVisited from './MarkVisited';
 import Link from 'next/link';
-import NextImage from 'next/image';
+// import NextImage from 'next/image';
 import { useEffect, useState } from 'react';
 
 type Config = {
